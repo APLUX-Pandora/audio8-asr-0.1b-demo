@@ -1,0 +1,8 @@
+.venv/
+/out/
+__pycache__/
+*.pyc
+models/*
+!models/README.md
+.DS_Store
+._*

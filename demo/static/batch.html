@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Batch transcription · Audio8-ASR-0.1B · Pandora</title>
+<link rel="icon" href="/static/pandora-mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body class="batch-page"><main class="batch">
+<header><h1>Audio8-ASR-0.1B</h1><nav class="mode-switch" aria-label="Demo mode"><a href="/">Live transcription</a><a href="/batch" aria-current="page">Batch transcription</a></nav><div class="brand"><img class="logo" src="/static/logo.png" alt="APLUX"><span class="divider"></span><img class="mark" src="/static/pandora-mark.svg" alt=""><b>Pandora</b></div></header>
+<div class="batch-layout">
+  <section class="card batch-setup" aria-labelledby="batch-title">
+    <h2 id="batch-title">Batch transcription</h2>
+    <p class="intro">Each stream transcribes the same speech sample. All results return together.</p>
+    <div class="batch-sample">
+      <h3>Beyond the README</h3>
+      <audio id="sample" aria-label="FOSDEM speech sample" controls preload="metadata"></audio>
+      <p class="credit" id="sample-credit"></p>
+      <p class="warning" id="sample-error" role="status" hidden></p>
+    </div>
+    <form id="batch-form">
+      <label for="stream-count">Streams <small>2–32</small></label>
+      <div class="actions">
+        <input id="stream-count" name="count" type="number" min="2" max="32" step="1" value="4" required>
+        <button id="start-all" class="primary" type="submit">Start all</button>
+      </div>
+    </form>
+    <p class="batch-status" id="batch-status" role="status">Ready</p>
+  </section>
+  <section class="card batch-output" aria-labelledby="batch-results-title">
+    <h2 id="batch-results-title">Results</h2>
+    <div class="metrics batch-metrics" id="batch-metrics" hidden>
+      <div class="metric"><small>SDK batch time</small><strong id="sdk-time"></strong></div>
+      <div class="metric"><small>Throughput RTF</small><strong id="throughput-rtf"></strong></div>
+      <div class="metric"><small>Per-stream waiting RTF</small><strong id="waiting-rtf"></strong></div>
+    </div>
+    <p class="intro" id="rtf-note" hidden>Throughput RTF divides SDK batch time, including audio preparation, inference, and decoding, by the combined input duration. Waiting RTF includes the full wait from clicking Start all until the results arrive and is shared by all streams in this batch.</p>
+    <p class="empty" id="batch-empty">Start a batch to see the transcriptions.</p>
+    <ol class="batch-results" id="batch-results"></ol>
+  </section>
+</div>
+</main>
+<template id="batch-result-template">
+  <li class="batch-result">
+    <div class="heading"><h3></h3><span class="pill"></span></div>
+    <p class="batch-text"></p>
+    <p class="state batch-wait"></p>
+  </li>
+</template>
+<script src="/static/batch.js" defer></script>
+</body>
+</html>

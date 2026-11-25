@@ -1,0 +1,3 @@
+APLUX-authored Python integration files are licensed under Apache-2.0.
+The precompiled native SDK has separate Pandora Model SDK terms, included
+with its binary and third-party notices. Model weights retain their own terms.

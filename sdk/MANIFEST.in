@@ -1,0 +1,11 @@
+include SHA256SUMS
+include wheels/pandora_runtime-*.whl
+include include/*.h
+include include/compat/*.h
+include native-library.json README.md PYTHON_API.md RUNTIME_API.md
+recursive-include lib *.so LICENSE THIRD_PARTY_NOTICES.txt *.txt
+recursive-include python *.py LICENSE
+
+recursive-include assets *.onnx *.txt
+
+include lib/qnn248/inventory.json lib/qnn248/manifest.json lib/qnn248/LICENSE.pdf

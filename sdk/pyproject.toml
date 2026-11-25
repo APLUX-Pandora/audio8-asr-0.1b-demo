@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=77,<81", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pandora-audio8-asr-0-1b"
+version = "1.0.0"
+description = "Audio8-ASR-0.1B Python SDK with its matched Linux AArch64 native library"
+readme = "README.md"
+requires-python = ">=3.10,<3.13"
+license = "Apache-2.0 AND LicenseRef-Pandora-Model-SDK"
+license-files = ["python/LICENSE", "lib/LICENSE", "lib/THIRD_PARTY_NOTICES.txt", "lib/LICENSES/*"]
+dependencies = ["numpy>=1.22", "scipy>=1.8", "soundfile>=0.12", "onnxruntime>=1.16,<2", "pandora-runtime>=1.0.2,<2"]
+
+[project.urls]
+Repository = "https://github.com/APLUX-Pandora/audio8-asr-0.1b-demo"
+
+[tool.setuptools]
+package-dir = {"" = "python"}
+packages = ["pandora_audio8_asr_0_1b"]
+include-package-data = false

@@ -1,0 +1,55 @@
+[
+  {
+    "id": "en_fosdem",
+    "language": "en",
+    "title": "English · Beyond the README",
+    "url": "/media/fosdem_beyond_readme_10min.mp4",
+    "poster": "/static/fosdem-poster.jpg",
+    "credit": "Lorna Mitchell · FOSDEM 2025 · 10-minute excerpt",
+    "source": "https://archive.fosdem.org/2025/schedule/event/fosdem-2025-5235-beyond-the-readme-crafting-a-better-developer-experience-for-open-source-projects/",
+    "license": "CC BY 2.0 BE",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/be/deed.en",
+    "batch_audio": {
+      "url": "/media/fosdem_beyond_readme_25s.wav",
+      "start_s": 5,
+      "end_s": 30
+    },
+    "hotwords": [
+      "readme",
+      "GitHub",
+      "GitLab",
+      "Wireshark",
+      "Markdown",
+      "reStructuredText",
+      "Codeberg"
+    ]
+  },
+  {
+    "id": "ja_library",
+    "language": "ja",
+    "title": "Japanese · Wikimedia World",
+    "url": "/media/wlf2025_wikimedia_world_10min.mp4",
+    "poster": "",
+    "credit": "Yuriko Kadokura · WLF2025 · Video: Latenscurtis · 10-minute excerpt",
+    "source": "https://commons.wikimedia.org/wiki/File:WLF2025_Forum_-_Wikimedia_World.webm",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sha256": "4cac6fa4c32a7bcdd3b91caa4eddefa707200c5b7cdfb7ccc2c7410fef2c6036",
+    "source_start_s": 600,
+    "source_end_s": 1200
+  },
+  {
+    "id": "ko_keynote2",
+    "language": "ko",
+    "title": "Korean · Abstract Wikipedia",
+    "url": "/media/wiki_seoul_2020_abstract_wikipedia_10min.mp4",
+    "poster": "",
+    "credit": "Ryu Cheol (WMKR) · Wikimedia Korea · 10-minute excerpt",
+    "source": "https://commons.wikimedia.org/wiki/File:WikiConference_Seoul_2020_Keynote_2.webm",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sha256": "cc4be79cf48c4df702f981e33d93bee8d67dc540be705b2efe3bdde316176ff5",
+    "source_start_s": 60,
+    "source_end_s": 660
+  }
+]

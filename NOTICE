@@ -1,0 +1,42 @@
+Audio8-ASR-0.1B native SDK
+
+APLUX contributions include the native frontend, graph orchestration, tokenizer
+integration, model state management and C interface.
+
+nlohmann/json 3.12.0: Copyright (c) 2013-2025 Niels Lohmann, MIT.
+See LICENSES/nlohmann-json-MIT.txt.
+ICU 70.1 code and Unicode data are statically embedded under the ICU/Unicode terms; see LICENSES/ICU.txt.
+OpenSSL libcrypto (Ubuntu package 3.0.2-0ubuntu1.30) is statically linked into the SDK
+under the Apache License 2.0.
+Copyright (c) 1998-2022 The OpenSSL Project.
+Copyright (c) 1995-1998 Eric A. Young, Tim J. Hudson.
+All rights reserved. See LICENSES/OpenSSL-Apache-2.0.txt.
+The SDK bundles the Qualcomm QNN runtime. See its supplier license and notices in sdk/lib/qnn248.
+Aidlux LMS is provided by the device.
+
+External model attribution
+--------------------------
+Model: Edge0/Audio8-ASR-0.1B, revision 8487da63d581fa4fc9b5c60444cb57c3a523d7aa.
+Upstream model license: Creative Commons Attribution-NonCommercial 4.0 International.
+Quantization and device conversion preserve the upstream rights and restrictions.
+See LICENSES/CC-BY-NC-4.0.txt. Model resources are distributed separately.
+
+Playback VAD: Silero VAD v5, Copyright (c) 2020-present Silero Team, MIT.
+See LICENSES/Silero-VAD-MIT.txt. Its unchanged ONNX asset is bundled in demo/assets with recorded hash/provenance;
+ONNX Runtime is an externally installed Python dependency with its own notices.
+
+Built-in media retain their original source-specific licenses and attribution.
+See docs/MEDIA_ATTRIBUTION.md and the credits shown in the player.
+
+The processor/hotword adaptation follows the fixed upstream official example and
+trie at revision8487da63d581fa4fc9b5c60444cb57c3a523d7aa. Its applicable upstream
+CC BY-NC4.0 terms remain in LICENSES/CC-BY-NC-4.0.txt and the standalone SDK.
+APLUX terms do not override rights in upstream-derived portions.
+
+Transformers synchronous text streamers
+-------------------------------------
+BaseStreamer, TextStreamer and TextIteratorStreamer in the SDK tokenizer support
+are adapted from huggingface/transformers v4.57.3 generation/streamers.py.
+Copyright 2023 The HuggingFace Inc. team. Licensed under Apache-2.0;
+see LICENSES/Apache-2.0.txt. Original class implementations are retained; the async
+class is omitted. Model weights remain separately licensed as described above.

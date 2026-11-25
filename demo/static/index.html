@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Live transcription · Audio8-ASR-0.1B · Pandora</title>
+<link rel="icon" href="/static/pandora-mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body><main>
+<header><h1>Audio8-ASR-0.1B</h1><nav class="mode-switch" aria-label="Demo mode"><a href="/" aria-current="page">Live transcription</a><a href="/batch">Batch transcription</a></nav><button id="help-open">Help</button><button id="hotword-open" aria-haspopup="dialog">Hotwords: off</button><div class="brand"><img class="logo" src="/static/logo.png" alt="APLUX"><span class="divider"></span><img class="mark" src="/static/pandora-mark.svg" alt=""><b>Pandora</b></div></header>
+<p class="intro">Play a demo or your own audio or video and follow the live transcript as it updates during playback.</p>
+<div class="layout">
+<section class="card" aria-label="Media and transcription settings">
+<div class="media-actions"><p id="media-title" class="media-title" title="Beyond the README · FOSDEM 2025">Beyond the README · FOSDEM 2025</p><button id="demo" data-src="/media/fosdem_beyond_readme_10min.mp4">Use demo</button><label class="file-button" for="file">Open file<input id="file" type="file" accept="audio/*,video/*,.mkv"></label></div>
+<label class="media-select" for="sample">Built-in video<select id="sample" disabled><option value="en_fosdem">English · Beyond the README</option></select></label>
+<video id="player" controls playsinline preload="metadata" poster="/static/fosdem-poster.jpg"></video>
+<p id="sample-credit" class="credit">Lorna Mitchell · FOSDEM 2025 · 10-minute excerpt · <a href="https://archive.fosdem.org/2025/schedule/event/fosdem-2025-5235-beyond-the-readme-crafting-a-better-developer-experience-for-open-source-projects/" target="_blank" rel="noopener">Source</a> · <a href="https://creativecommons.org/licenses/by/2.0/be/deed.en" target="_blank" rel="noopener">CC BY 2.0 BE</a> · Trimmed &amp; transcoded</p>
+<fieldset id="timing" class="timing" aria-describedby="timing-help"><label for="initial">First preview (seconds)<input id="initial" type="number" min="0.32" max="24" step="any" value="1.5" required></label><label for="refresh">Re-transcription interval (seconds)<input id="refresh" type="number" min="0.32" max="24" step="any" value="0.75" required></label></fieldset>
+<p id="timing-help" class="timing-help">Set before starting. Shorter intervals may show text sooner, with more revisions and processing.</p>
+<div class="actions"><button id="start" class="primary" disabled>Start transcription</button><button id="stop" disabled>Stop</button><button id="reload" hidden>Reload model</button></div>
+<div class="state" id="status" role="status" aria-live="polite">Loading the built-in lecture…</div>
+<div class="metrics"><div class="metric"><small>Media position</small><strong id="position">00:00</strong></div><div class="metric"><small>First text</small><strong id="first">—</strong></div><div class="metric"><small>Processing backlog</small><strong id="lag">0.0 s</strong></div><div class="metric"><small>Speech probability</small><strong id="vad">—</strong></div><div class="metric"><small>Recognition calls</small><strong id="calls">0</strong></div><div class="metric"><small>Compute / audio</small><strong id="rtf">—</strong></div></div>
+</section>
+<section class="card"><div class="heading"><h2>Transcript</h2><div class="actions"><button id="copy">Copy</button><button id="export">Export</button></div></div><div id="transcript" class="transcript"><div class="empty">Start transcription to follow the lecture.</div></div></section>
+</div>
+<p class="footer">Multilingual recognition · Local processing · No microphone</p>
+</main>
+<dialog id="hotword-dialog" aria-labelledby="hotword-title"><div class="heading"><h2 id="hotword-title">Hotword boosting</h2><button id="hotword-close">Done</button></div>
+<p>Optional recognition hints. The English lecture includes suggested terms, with boosting off. Changing media clears the previous selection. Set before starting. Hints may produce words that were not spoken.</p>
+<label><input id="hotword-enabled" type="checkbox"> Enable hotword boosting</label>
+<p><label for="hotword-words">Words or phrases (one per line, or comma-separated)</label><textarea id="hotword-words" rows="4" style="display:block;width:100%" placeholder="readme"></textarea></p>
+<p>Clear or disable hotwords to restore ordinary decoding.</p></dialog>
+<dialog id="help"><div class="heading"><h2>Live transcription</h2><button id="help-close">Close</button></div><p>Choose an English, Japanese or Korean built-in video, or Open file to use your own audio or video. Use demo returns to the selected built-in video. Each built-in excerpt is ten minutes long.</p><p>Start plays from the current position. Pause confirms received speech; resume continues. Seeking during transcription starts a fresh session at the new position and clears the displayed transcript.</p><p>Timing values count audio duration, including pre-roll for the first preview. Temporary text may change as more speech arrives. Pauses confirm segments. Continuous speech is split into overlapping windows; boundary words may repeat or change.</p><p>Only the sound played so far is sent to the local device. Local files remain in your browser; no microphone is used. Copy and export include confirmed text. Use one transcription session at a time on this shared device.</p></dialog>
+<script src="/static/pcm-worklet.js"></script><script src="/static/app.js"></script>
+</body></html>

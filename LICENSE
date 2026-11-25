@@ -1,0 +1,9 @@
+Licensing index
+
+APLUX-authored application code, examples, public headers and Python bindings:
+Apache-2.0, see LICENSES/Apache-2.0.txt.
+
+APLUX proprietary SDK contributions: Pandora terms in LICENSES/Pandora-Model-SDK.zh-CN.txt
+and the accompanying English text. The Chinese text governs as stated there.
+These terms apply only to rights APLUX can license. Third-party portions, external
+model resources and media retain their own terms. See LICENSING.md and NOTICE.

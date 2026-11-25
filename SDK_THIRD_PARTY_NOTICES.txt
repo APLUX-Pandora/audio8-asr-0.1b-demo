@@ -1,0 +1,16 @@
+Audio8-ASR-0.1B native SDK
+
+APLUX contributions include the native frontend, graph orchestration, tokenizer
+integration, model state management and C interface.
+
+nlohmann/json 3.12.0: Copyright (c) 2013-2025 Niels Lohmann, MIT.
+See LICENSES/nlohmann-json-MIT.txt.
+ICU 70.1 code and Unicode data are statically embedded under the ICU/Unicode terms; see LICENSES/ICU.txt.
+OpenSSL libcrypto (Ubuntu package 3.0.2-0ubuntu1.30) is statically linked into the SDK
+under the Apache License 2.0.
+Copyright (c) 1998-2022 The OpenSSL Project.
+Copyright (c) 1995-1998 Eric A. Young, Tim J. Hudson.
+All rights reserved. See LICENSES/OpenSSL-Apache-2.0.txt.
+The SDK bundles the Qualcomm QNN runtime under its supplier license.
+Aidlux LMS is provided separately for model authorization and retains its
+supplier license.
