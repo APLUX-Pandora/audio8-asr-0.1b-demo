@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pandora-audio8-asr-0-1b"
-version = "1.0.0"
+version = "1.1.0"
 description = "Audio8-ASR-0.1B Python SDK with its matched Linux AArch64 native library"
 readme = "README.md"
 requires-python = ">=3.10,<3.13"

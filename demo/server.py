@@ -475,7 +475,7 @@ class Handler(BaseHTTPRequestHandler):
         data = (ROOT / 'demo/static' / name).read_bytes()
         self.send_response(200)
         self.send_header('Content-Type', kind)
-        if route in ('/', '/batch', '/static/batch.js', '/static/style.css'):
+        if route in ('/', '/batch', '/static/app.js', '/static/batch.js', '/static/style.css'):
             self.send_header('Cache-Control', 'no-cache')
         self.send_header('Content-Length', str(len(data)))
         self.end_headers()

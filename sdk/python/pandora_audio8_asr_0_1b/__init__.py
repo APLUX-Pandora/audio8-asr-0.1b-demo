@@ -6,7 +6,7 @@ from ._types import (
     TranscriptionResult,
 )
 
-__version__ = "1.0.0"
+__version__ = "1.1.0"
 
 __all__ = [
     "ASRModel", "Runtime", "CpuOptions", "QnnOptions",

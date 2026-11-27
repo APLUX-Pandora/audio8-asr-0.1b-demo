@@ -68,7 +68,9 @@ hf download APLUX-Pandora/Audio8-ASR-0.1B --local-dir models --include "targets/
 bash demo/run.sh --port 8766
 ```
 
-Open `http://<device-ip>:8766/`. **Live transcription** updates subtitles as one audio or video file plays. **Batch transcription** runs 2–32 independent copies of the included speech sample in a single request. Stop the server with `Ctrl+C`. See the [Web Demo guide](demo/README.md).
+Open `http://<device-ip>:8766/` and choose **Live transcription** to upload audio or follow video subtitles. For the microphone, use a trusted HTTPS URL, or run `ssh -N -L 8766:localhost:8766 <user>@<device-ip>` on the computer running your browser and open `http://localhost:8766/`. Select **Microphone**, select **Start transcription**, and allow access when prompted.
+
+**Batch transcription** runs 2–32 copies of the included speech sample in one request. Stop the Demo with `Ctrl+C`. See the [Web Demo guide](demo/README.md).
 
 ## 4. Python Usage
 

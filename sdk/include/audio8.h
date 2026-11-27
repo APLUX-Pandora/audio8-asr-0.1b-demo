@@ -1,5 +1,5 @@
 #pragma once
-#define A8_VERSION "1.0.0"
+#define A8_VERSION "1.1.0"
 #include <stddef.h>
 #include <stdint.h>
 #include "pandora_runtime.h"
